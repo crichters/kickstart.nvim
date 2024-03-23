@@ -157,6 +157,14 @@ vim.opt.scrolloff = 10
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+-- Set Escape C:
+local function switch_to_normal_mode()
+  vim.cmd 'stopinsert' -- Stop insert mode
+  vim.cmd 'startinsert!' -- Start insert mode and immediately exit
+end
+
+vim.keymap.set('i', '<C-[', '<Cmd>lua switch_to_normal_mode()<CR>', { noremap = true, silent = true })
+
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
