@@ -34,6 +34,24 @@ vim.api.nvim_create_autocmd('FileType', {
     vim.opt.expandtab = true
   end,
 })
+
+vim.api.nvim_create_autocmd('Filetype', {
+  pattern = { 'c', 'cpp', 'h', 'lua', 'json' },
+  callback = function()
+    vim.opt.tabstop = 2
+    vim.opt.shiftwidth = 2
+    vim.opt.expandtab = true
+  end,
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'nix',
+  callback = function()
+    vim.opt.tabstop = 2
+    vim.opt.shiftwidth = 2
+    vim.opt.expandtab = true
+  end,
+})
 -- END LanguageOptions
 
 -- BEGIN FontOptions
