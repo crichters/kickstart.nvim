@@ -12,18 +12,14 @@ opt.foldlevel = 99
 -- BEGIN CommentBehavior
 vim.api.nvim_create_autocmd('FileType', {
   pattern = '*',
-  callback = function()
-    vim.opt_local.formatoptions:remove { 'r', 'o' }
-  end,
+  callback = function() vim.opt_local.formatoptions:remove { 'r', 'o' } end,
 })
 -- END CommentBehavior
 
 -- BEGIN LanguageOptions
 vim.api.nvim_create_autocmd('FileType', {
   pattern = 'python',
-  callback = function()
-    opt.foldignore = ''
-  end,
+  callback = function() opt.foldignore = '' end,
 })
 
 vim.api.nvim_create_autocmd('FileType', {
@@ -66,19 +62,19 @@ vim.api.nvim_set_hl(0, 'NonText', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'LineNr', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'none' })
 -- END StyleOptions
-
--- BEGIN NeoGen
-
-require('neogen').setup {
-  enabled = true,
-  input_after_command = true,
-  languages = {
-    python = {
-      template = {
-        annotation_convention = 'google_docstrings',
-      },
-    },
-  },
-}
-
--- END NeoGen
+--
+-- -- BEGIN NeoGen
+--
+-- require('neogen').setup {
+--   enabled = true,
+--   input_after_command = true,
+--   languages = {
+--     python = {
+--       template = {
+--         annotation_convention = 'google_docstrings',
+--       },
+--     },
+--   },
+-- }
+--
+-- -- END NeoGen
