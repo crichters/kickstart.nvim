@@ -937,6 +937,12 @@ require('lazy').setup({
   require 'kickstart.plugins.neo-tree',
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommended keymaps
 
+  require 'custom.lsp.c',
+  require 'custom.lsp.nix',
+  require 'custom.lsp.python',
+  require 'custom.lsp.rust',
+  require 'custom.lsp.web',
+
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
   --

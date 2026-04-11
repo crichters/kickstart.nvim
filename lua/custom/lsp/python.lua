@@ -1,4 +1,7 @@
-vim.lsp.config('ty', {})
+return {
 
-vim.lsp.enable 'ty'
-vim.lsp.enable 'ruff'
+  vim.lsp.config('ty', {}),
+
+  vim.lsp.enable 'ty',
+  vim.lsp.enable 'ruff',
+}

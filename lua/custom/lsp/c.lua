@@ -1,1 +1,3 @@
-vim.lsp.enable 'clangd'
+return {
+  vim.lsp.enable 'clangd',
+}
